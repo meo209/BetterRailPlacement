@@ -26,7 +26,7 @@ public abstract class MixinRailPlacementHelper {
     @Shadow private BlockState state;
 
     @Inject(method = "updateBlockState", at = @At("HEAD"), cancellable = true)
-    private void updateBlockState(boolean poweredpa, boolean forceUpdate, RailShape railShape, CallbackInfoReturnable<RailPlacementHelper> cir) {
+    private void updateBlockState(boolean powered, boolean forceUpdate, RailShape railShape, CallbackInfoReturnable<RailPlacementHelper> cir) {
         PlayerEntity player = world.getClosestPlayer(pos.getX(), pos.getY(), pos.getZ(), 5, false);
         if (player != null && player.isSneaking()) {
             BlockState state = getBlockState();
