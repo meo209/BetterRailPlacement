@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.meo209.betterrailplacement.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MixinRailPlacementHelper"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
